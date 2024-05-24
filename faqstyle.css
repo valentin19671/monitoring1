@@ -1,0 +1,89 @@
+
+
+
+  :root{
+    --text-color: rgb(218, 218, 218);
+    --main-color: #009fd2;
+    --block-color: rgb(40, 40, 40);
+    --block-shadow: rgba(0, 0, 0, .2);
+    --background-main: rgb(22 22 22);
+}
+
+
+.accordion{
+  margin-top: 30px;
+  margin-bottom: 200px;
+}
+
+  .accordion a {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--text-color);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: sans-serif;
+    font-size: large;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 18px;
+    border-radius: 16px;
+    border-bottom: 1px solid var(--main-color);
+    padding-left: 20px;
+    margin-top: 15px;
+    background-color: var(--block-color);
+    box-shadow: inset -8px 0px 20px 0px var(--block-shadow);
+  }
+  .accordion a:hover,
+  .accordion a:hover::after {
+    cursor: pointer;
+    color: var(--main-color);
+  }
+  .accordion a:hover::after {
+    border: 1px solid var(--main-color);
+  }
+  .accordion a.active {
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+  }
+ 
+  .accordion .content1 {
+    padding-left: 20px;
+    opacity: 0;
+    max-height: 0;
+    
+    overflow: hidden;
+    clear: both;
+    -webkit-transition: all 0.3s linear ;
+    -o-transition: all 0.3s linear ;
+    transition: all 0.3s linear ;
+  }
+  .accordion .content1 p {
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 160%;
+    color: var(--text-color);
+    text-align: center;
+  }
+  .accordion .content1.active {
+    opacity: 1;
+    padding: 1rem;
+    max-height: 100%;
+    -webkit-transition: all 0.35s linear ;
+    -o-transition: all 0.35s linear ;
+    transition: all 0.35s linear ;
+  }
